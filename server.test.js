@@ -1,7 +1,7 @@
 // Do not modify this file
 const supertest = require("supertest");
-// const app = require("./app");
-const app = require("./app.solution.js");
+const app = require("./app");
+// const app = require("./app.solution.js");
 const request = supertest(app);
 const fs = require("fs");
 const path = require("path");
