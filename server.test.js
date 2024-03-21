@@ -297,7 +297,7 @@ describe("PATCH /account/:id/courses/add", () => {
 		beforeAll(async () => {
 			res = await request
 				.patch(`/account/${existingUser.id + 1}/courses/add`)
-				.send(existingUser.courses[0]);
+				.send({ course: existingUser.courses[0] });
 		});
 		test("should respond with code 401", () => {
 			expect(res.statusCode).toBe(401);
